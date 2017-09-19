@@ -39,15 +39,30 @@ namespace HospitalEmployeeClassProject
 
         //constructors
 
-        public virtual double WeeklySalary(double hourlyWage, double hoursThisWeek)
+
+            public Employee()
         {
-            double paycheck = hourlyWage * hoursThisWeek;
-            return paycheck;
+
+        }
+
+        public Employee(string name)
+        {
+            this.name = name;
         }
 
 
         //methods
 
+            public virtual void PrintInfo(string name, int employeeNumber)
+        {
+            Console.WriteLine($"{name}'s employee number is {employeeNumber}");
+        }
+
+        public virtual double WeeklyPay(double hourlyWage, double hoursThisWeek)  //default for hourly wage earners
+        {
+            double paycheck = hourlyWage * hoursThisWeek;
+            return paycheck;
+        }
 
     }
 }

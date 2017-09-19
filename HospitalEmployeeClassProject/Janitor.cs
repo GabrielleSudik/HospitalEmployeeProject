@@ -32,6 +32,25 @@ namespace HospitalEmployeeClassProject
         //methods
 
 
+        public virtual void PrintInfo(string name, int employeeNumber, bool isSweeping)
+        {
+            string sweepStatus = "";
+
+                if(isSweeping == true)
+            {
+                sweepStatus = "is";
+            }
+
+            else
+            {
+                sweepStatus = "is not";
+            }
+                    
+            Console.WriteLine($"{name}'s employee number is {employeeNumber}");
+            Console.WriteLine($"{name} {sweepStatus} currently sweeping.");
+        }
+
+
 
     }
 }
